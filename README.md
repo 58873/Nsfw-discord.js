@@ -1,7 +1,7 @@
 # nsfw-discord!
 
 nsfw-discord is a simple package to implement NSFW commands for discord bots.
-
+Thanks for https://github.com/Arlene107/discord-nsfw!
 
 # How to use.
 
