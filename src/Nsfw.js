@@ -1,5 +1,29 @@
-const superagent = require("superagent");
-// Test
+class Nsfw {
+  constructor() {
+    this.methods = [
+      "anal",
+      "fourk",
+      "ass",
+      "gonewild",
+      "pgif",
+      "pussy",
+      "thigh",
+      "boobs",
+      "hentaiass",
+      "hentai",
+      "hmidriff",
+      "hentaithigh",
+      "erokemo",
+      "kitsune",
+      "lewd",
+      "nekofeet",
+      "nekopussy",
+      "nekotits",
+      "solo",
+      "wallpaper",
+    ];
+  }
+
   async anal() {
     const { body } = await superagent.get(
       "https://nekobot.xyz/api/image?type=anal"
@@ -8,7 +32,6 @@ const superagent = require("superagent");
   }
 
   async fourk() {
-    if (!message.channel.nsfw) return;
     const { body } = await superagent.get(
       "https://nekobot.xyz/api/image?type=4k"
     );
@@ -72,11 +95,37 @@ const superagent = require("superagent");
     return body.message;
   }
 
+  async hmidriff() {
+    const { body } = await superagent.get(
+      "https://nekobot.xyz/api/image?type=hmidriff"
+    );
+    return body.message;
+  }
+
   async hentaithigh() {
     const { body } = await superagent.get(
       "https://nekobot.xyz/api/image?type=hthigh"
     );
     return body.message;
+  }
+
+  async erokemo() {
+    const { body } = await superagent.get(
+      "https://nekos.life/api/v2/img/erokemo"
+    );
+    return body.url;
+  }
+
+  async kitsune() {
+    const { body } = await superagent.get(
+      "https://nekos.life/api/v2/img/fox_girl"
+    );
+    return body.url;
+  }
+
+  async lewd() {
+    const { body } = await superagent.get("https://nekos.life/api/v2/img/lewd");
+    return body.url;
   }
 
   async nekofeet() {
